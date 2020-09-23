@@ -142,13 +142,13 @@ With this model we'll need to identify to individual values of lambda, lambda an
 
 ![feat_coefs](feature_coefs.png)
 
-FEATURE COEFS TABLE
+![coefs_table](coefs_table.png)
 
 As expected the behaviour between these models is similar since they are all linear regression models. However, some of our previous expectations of coefficients are displayed. The ridge model attempts to reduce the coefficients where possible. The lasso reduces them even further and even brings some down to 0 when necessary. Then finally, the elastic net lands somewhere in the middle.
 
 Its time for the moment of truth, let's see the results of each model's predictions on the test set.
 
-RESULTS TABLE
+![res_table](results_table.png)
 
 Although all of our models have performed similarly, it depends on which scoring metric you look at the determine the overall winner. Let's explore the different scoring metrics.
 
