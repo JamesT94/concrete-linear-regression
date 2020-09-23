@@ -121,30 +121,24 @@ In this section we will evaluate 4 different linear regression models:
 ### Simple (Ordinary Least Squares)
 As the hallmark of any regression problem, linear regression is a simple but effective way of making predictions when you expect your data to have mostly linear relationships.
 
-$$
-y = \alpha + \beta x = \sum_{i=0}^{n} \alpha + \beta_i x_i
-$$
-
-Where $y$ is the target variable we are looking to predict, we use each feature variable ($x_i$) multiplied by a coefficient ($\beta_i$) plus the consistent error ($\alpha$).
-
 Sometimes the Ordinary Least Squares method can suffer from a low bias and a consequently high variance. To remedy some of this, we can introduce regularisation in the form of Ridge and Lasso regression.
 
 ### Ridge
-Ridge regression introduces a penalty on the size of coefficients which can address some of the problems faced when using simple regression. In simple terms, the introduction of a term $\lambda$ is multiplied by the coefficient and added to the overall error, therefore encouraging a lower coefficient that is less sensitive to change.
+Ridge regression introduces a penalty on the size of coefficients which can address some of the problems faced when using simple regression. In simple terms, the introduction of a term lambda is multiplied by the coefficient and added to the overall error, therefore encouraging a lower coefficient that is less sensitive to change.
 
-To identify the best value of $\lambda$ we will use 10-fold cross validation.
+To identify the best value of lambda we will use 10-fold cross validation.
 
 ### Lasso
-Lasso regression is very similar to ridge regression. They key difference is that instead of $\lambda$ being multiplied by the coefficient squared, it is instead multiplied by the magnitude. This importantly means that instead of less valuable features asymptotically reaching 0 with ridge regression, they can be completely nullified to 0 with lasso regression.
+Lasso regression is very similar to ridge regression. They key difference is that instead of lambda being multiplied by the coefficient squared, it is instead multiplied by the magnitude. This importantly means that instead of less valuable features asymptotically reaching 0 with ridge regression, they can be completely nullified to 0 with lasso regression.
 
-Once again we will use 10-fold CV to identify the best value for $\lambda$.
+Once again we will use 10-fold CV to identify the best value for lambda.
 
 In conclusion, ridge performs well when most variables are useful, and lasso performs well when you have a lot of useless variables. It is unclear which approach will work best in our problem since we have a rather small amount of variables, but some of them seem to have little impact on the compressive strength.
 
 ### Elastic Net
 If we find that the positives of ridge and lasso are both worthwhile, then perhaps elastic net regression is the way to go. This method combines the positives of the 2 previously mentioned into a nice package.
 
-With this model we'll need to identify to individual values of lambda, $\lambda_1$ and $\lambda_2$ with cross validation.
+With this model we'll need to identify to individual values of lambda, lambda and lambda_ with cross validation.
 
 ![feat_coefs](feature_coefs.png)
 
