@@ -170,7 +170,7 @@ After utilising linear regression models it has become evident that blast furnac
 
 All of our linear regression models performed similarly in the scoring metrics and would all be suitable in a production environment for making further predictions and testing.
 
-To improve, perhaps decision trees and ensemble methods could be used to increase the prediction score.
+To improve, perhaps decision trees and ensemble methods could be used to increase the prediction score.  
 
 ### References
 
