@@ -1,0 +1,5 @@
+streamlit
+numpy
+pandas
+pickle
+sklearn.linear_model
