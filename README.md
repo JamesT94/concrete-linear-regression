@@ -26,7 +26,7 @@ The first, and arguably most important, step in a data science project is to exp
 
 First of all, let's check the disribution of our target variable and take a closer look at the input features and try to identify any correlations.
 
-![str_dist](strength_dist.png)
+![str_dist](imgs/strength_dist.png)
 
 ![pair_plot](pair_plot.png)
 
