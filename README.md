@@ -28,11 +28,11 @@ First of all, let's check the disribution of our target variable and take a clos
 
 ![str_dist](imgs/strength_dist.png)
 
-![pair_plot](pair_plot.png)
+![pair_plot](imgs/pair_plot.png)
 
 At first glance, there doesn't seem to be any high correlation between any 2 features. Although Cement and Compressive Strength look like they may have some correlation. Let's determine the Pearson Correlation coefficients to get a numerical value of the strength of the correlations.
 
-![r_heat](r_heatmap.png)
+![r_heat](imgs/r_heatmap.png)
 
 As expected, the highest positive correlations is between **Compressive Strength** and **Cement**. 
 
@@ -71,7 +71,7 @@ Additionally, there are strong correlations between some of the feature variable
 
 Perhaps plotting these relationships in a visual way will help to gain more insight.
 
-![feat1](feature_compare1.png)
+![feat1](imgs/feature_compare1.png)
 
 From this plot we can make some sensible observations on the relationships between these variables and compressive strength:  
 
@@ -81,7 +81,7 @@ From this plot we can make some sensible observations on the relationships betwe
 * **Compressive Strength** correlates negatively with **Water**
 * High **Compressive Strength** with a low **Age** requires more **Cement**
 
-![feat2](feature_compare2.png)
+![feat2](imgs/feature_compare2.png)
 
 From this plot we can make further observations on the relationships between this second set of variables and compressive strength:  
 
@@ -107,7 +107,7 @@ Now that the data is prepared, we can fit different models on the training data 
 
 This diagram from the [scikit-learn website](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html) can be helpful tool when it comes to deciding which models to initially compare.
 
-![Machine Learning Map](ml_map.png)
+![Machine Learning Map](imgs/ml_map.png)
 
 Since we "predicting a quantity" we are solving a regression problem. We also have less than 100k samples so **Lasso** and **Elastic Net** are the recommended estimators. Just to cover the basics and completeness, we'll also throw in basic **Linear Regression** and **Ridge**
 
@@ -140,15 +140,15 @@ If we find that the positives of ridge and lasso are both worthwhile, then perha
 
 With this model we'll need to identify to individual values of lambda, lambda and lambda_ with cross validation.
 
-![feat_coefs](feature_coefs.png)
+![feat_coefs](imgs/feature_coefs.png)
 
-![coefs_table](coefs_table.png)
+![coefs_table](imgs/coefs_table.png)
 
 As expected the behaviour between these models is similar since they are all linear regression models. However, some of our previous expectations of coefficients are displayed. The ridge model attempts to reduce the coefficients where possible. The lasso reduces them even further and even brings some down to 0 when necessary. Then finally, the elastic net lands somewhere in the middle.
 
 Its time for the moment of truth, let's see the results of each model's predictions on the test set.
 
-![res_table](results_table.png)
+![res_table](imgs/results_table.png)
 
 Although all of our models have performed similarly, it depends on which scoring metric you look at the determine the overall winner. Let's explore the different scoring metrics.
 
@@ -177,7 +177,7 @@ As an extra task I decided to create a web app that uses the best model to test 
 
 You can access the app [here](https://share.streamlit.io/jamest94/concrete-compressive-strength/package-and-deploy.py) and see below for a screenshot. The sliders allow the user to try different amounts of each ingedient and hit the predict button to see the compressive strength.
 
-![Streamlit Web App](streamlit.png)
+![Streamlit Web App](imgs/streamlit.png)
 
 ### References
 
