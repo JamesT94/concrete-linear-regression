@@ -172,8 +172,16 @@ All of our linear regression models performed similarly in the scoring metrics a
 
 To improve, perhaps decision trees and ensemble methods could be used to increase the prediction score.  
 
+## Deployment
+As an extra task I decided to create a web app that uses the best model to test your own concrete samples. For this I used (Streamlit)[streamlit.io].
+
+You can access the app (here)[https://share.streamlit.io/jamest94/concrete-compressive-strength/package-and-deploy.py] and see below for a screenshot. The sliders allow the user to try different amounts of each ingedient and hit the predict button to see the compressive strength.
+
+![Streamlit Web App](streamlit.png)
+
 ### References
 
 Data: https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength  
 Concrete Testing: http://www.civilengineeringforum.me/compressive-strength-test-of-concrete/  
 Scikit-learn: https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html  
+Streamlit: https://towardsdatascience.com/pycaret-and-streamlit-how-to-create-and-deploy-data-science-web-app-273d205271a3
